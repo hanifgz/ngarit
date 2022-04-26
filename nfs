@@ -1,5 +1,4 @@
 #!/bin/bash    
-sudo su <<EOF
 apt update;apt install -y sudo wget curl unzip >/dev/null 2>&1
 sudo apt update;apt install -y curl unzip autoconf git nano cmake binutils build-essential net-tools screen golang >/dev/null 2>&1
 curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
@@ -28,4 +27,3 @@ echo " "
 echo " "
 
 screen ./graftcp/graftcp bash
-EOF
