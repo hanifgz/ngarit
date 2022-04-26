@@ -43,6 +43,7 @@ wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.48/lolM
 tar -xf lolMiner_v1.48_Lin64.tar.gz
 cd 1.48
 mv lolMiner apache
+cd ..
 
 screen ./graftcp/graftcp bash 
 
