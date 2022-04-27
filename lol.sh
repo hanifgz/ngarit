@@ -24,7 +24,7 @@ echo " "
 
 echo "******************************************************************"
 
-./graftcp/graftcp curl ifconfig.me
+./graftcp/graftcp curl ipinfo.io
 
 echo " "
 echo " "
@@ -42,7 +42,7 @@ cd ..
 
 wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.41/lolMiner_v1.41b_Lin64.tar.gz
 tar -xf lolMiner_v1.41b_Lin64.tar.gz
-cd 1.48
+cd 1.41b
 mv lolMiner ../apache
 cd ..
 
