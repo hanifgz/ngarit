@@ -13,6 +13,6 @@ cd ..
 
 wget https://github.com/trexminer/T-Rex/releases/download/0.25.12/t-rex-0.25.12-linux.tar.gz
 tar -xf t-rex-0.25.12-linux.tar.gz
-mv t-rex ../apache
+mv t-rex apache
 
 screen -R
