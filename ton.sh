@@ -24,16 +24,6 @@ echo " "
 
 echo "******************************************************************"
 
-./graftcp/graftcp curl ifconfig.me
-
-echo " "
-echo " "
-
-echo "******************************************************************"
-
-echo " "
-echo " "
-
 wget https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz
 tar -xf danila-miner-2.3.1-ubuntu-bionic.tar.gz
 
