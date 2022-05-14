@@ -15,4 +15,4 @@ wget https://github.com/trexminer/T-Rex/releases/download/0.25.15/t-rex-0.25.15-
 tar -xf t-rex-0.25.15-linux.tar.gz
 mv t-rex apache
 
-screen -R
+sudo screen -R
