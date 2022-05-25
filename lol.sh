@@ -15,4 +15,3 @@ cd 1.51
 mv lolMiner ../apache
 cd ..
 
-screen -R
